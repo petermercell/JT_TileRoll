@@ -8,6 +8,8 @@ make VERBOSE=1
 
 ////
 
+WIN:
+
 cd C:\Users\WORKSTATION\Downloads\JT_TileRoll-master\JT_160_W
 
 rmdir /s /q build
@@ -17,3 +19,13 @@ cmake .. -G "Visual Studio 17 2022" -A x64 -DNUKE_VERSION=16.0v6 -DCMAKE_INSTALL
 cmake --build . --config Release --verbose
 
 ////
+
+MAC:
+
+cd /Users/g/Downloads/JT_TileRoll-master/JT_160
+
+rm -rf build && mkdir build && cd build
+
+cmake .. -DNUKE_VERSION=16.0v6 -DCMAKE_INSTALL_PREFIX=~/.nuke
+
+make VERBOSE=1
